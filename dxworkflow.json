@@ -3,12 +3,12 @@
   "title": "PanCan_workflow_v1.0.0_dev",
   "stages": [
     {
-      "id": "stage-GVJbJ0040f98VZqZvbVjG3QQ",
+      "id": "stage-staraligner",
       "executable": "applet-GZ065Xj40f95ZG0k8BGppgX5",
       "folder": "staraligner"
     },
     {
-      "id": "stage-GVJbJ4040f93v0q38jj01jfF",
+      "id": "stage-starfusion",
       "executable": "applet-GVJb8K840f9PGjxF51Xx8B15",
       "folder": "starfusion",
       "input": {
@@ -20,14 +20,14 @@
         },
         "junction": {
           "$dnanexus_link": {
-            "stage": "stage-GVJbJ0040f98VZqZvbVjG3QQ",
+            "stage": "stage-staraligner",
             "outputField": "chimeric_junctions"
           }
         }
       }
     },
     {
-      "id": "stage-GVJbJYQ40f9Jj7g3988ffZ4F",
+      "id": "stage-fusioninspector",
       "executable": "applet-GZ07X684k173780xy2pp3Q03",
       "folder": "fusion_inspector",
       "input": {
@@ -39,7 +39,7 @@
         },
         "sr_predictions": {
           "$dnanexus_link": {
-            "stage": "stage-GVJbJ4040f93v0q38jj01jfF",
+            "stage": "stage-starfusion",
             "outputField": "starfusion_predictions"
           }
         },
@@ -57,23 +57,23 @@
       }
     },
     {
-      "id": "stage-GVJbKYj40f9Gqx7g69fQb3pz",
+      "id": "stage-multifastqc",
       "executable": "applet-FvyXygj433GbKPPY0QY8ZKQG",
       "folder": "multi_fastqc"
     },
     {
-      "id": "stage-GVJbPj840f91P7b3yFFGpx18",
+      "id": "stage-rnaseqc",
       "executable": "applet-GZ8qF5j40f9JfgP2XxGF4vQ0",
       "folder": "RNASeQC"
     },
     {
-      "id": "stage-GVJbQq840f9PVFZVQj4y0jk9",
+      "id": "stage-picard",
       "executable": "applet-GVJbQfQ40f96gKKgf5X9JX3x",
       "folder": "picard",
       "input": {
         "sorted_bam": {
           "$dnanexus_link": {
-            "stage": "stage-GVJbJ0040f98VZqZvbVjG3QQ",
+            "stage": "stage-staraligner",
             "outputField": "output_bam"
           }
         },
@@ -94,37 +94,37 @@
       }
     },
     {
-      "id": "stage-GZvZ6Y840f99Z4p52G831PGV",
+      "id": "stage-pancanreportgenerator",
       "executable": "applet-GZB6vx840f90kGjYJ18zZz5q",
       "folder": "pancan_report_generator",
       "input": {
         "bam": {
           "$dnanexus_link": {
-            "stage": "stage-GVJbJ0040f98VZqZvbVjG3QQ",
+            "stage": "stage-staraligner",
             "outputField": "output_bam"
           }
         },
         "rnaseqc_coverage": {
           "$dnanexus_link": {
-            "stage": "stage-GVJbPj840f91P7b3yFFGpx18",
+            "stage": "stage-rnaseqc",
             "outputField": "coverage_hgnc"
           }
         },
         "rnaseqc_exon": {
           "$dnanexus_link": {
-            "stage": "stage-GVJbPj840f91P7b3yFFGpx18",
+            "stage": "stage-rnaseqc",
             "outputField": "exon_cv"
           }
         },
         "rnaseqc_metrics": {
           "$dnanexus_link": {
-            "stage": "stage-GVJbPj840f91P7b3yFFGpx18",
+            "stage": "stage-rnaseqc",
             "outputField": "metrics"
           }
         },
         "fusioninspector_abridged": {
           "$dnanexus_link": {
-            "stage": "stage-GVJbJYQ40f9Jj7g3988ffZ4F",
+            "stage": "stage-fusioninspector",
             "outputField": "fi_coding"
           }
         },
