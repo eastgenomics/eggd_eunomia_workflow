@@ -1,0 +1,38 @@
+{
+  "name": "pancan_workflow_v1.0.0",
+  "title": "pancan_workflow_v1.0.0",
+  "stages": [
+    {
+      "id": "stage-GpGJ38040f983Xg492Q7Q9zz",
+      "executable": "app-eggd_staraligner/1.0.1"
+    },
+    {
+      "id": "stage-GpGJ39Q40f999kYq8fV46xkj",
+      "executable": "app-eggd_starfusion/1.0.0"
+    },
+    {
+      "id": "stage-GpGJ3J840f9P0289Y1z5q1Kf",
+      "executable": "app-eggd_fusioninspector/1.0.0"
+    },
+    {
+      "id": "stage-GpGJ3KQ40f999kYq8fV46xky",
+      "executable": "app-eggd_fusioninspector/1.0.0"
+    },
+    {
+      "id": "stage-GpGJ3P840f9P2F8FjxG00VPy",
+      "executable": "app-eggd_fusioninspector/1.0.0"
+    },
+    {
+      "id": "stage-GpGJ3VQ40f983Xg492Q7QB18",
+      "executable": "app-eggd_RNASeQC/1.1.1"
+    },
+    {
+      "id": "stage-GpGJ3Z040f9BZ0Jj2Yf4Y9X5",
+      "executable": "app-eggd_picard_QC/1.1.0"
+    },
+    {
+      "id": "stage-GpGJ5V840f96ggPg0zfJGZ49",
+      "executable": "app-eggd_fastqc/1.2.0"
+    }
+  ]
+}
