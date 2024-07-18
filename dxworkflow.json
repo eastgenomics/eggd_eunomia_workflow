@@ -1,0 +1,38 @@
+{
+  "name": "pancan_workflow_v1.0.0",
+  "title": "pancan_workflow_v1.0.0",
+  "stages": [
+    {
+      "id": "stage-staraligner",
+      "executable": "app-eggd_staraligner/1.0.1"
+    },
+    {
+      "id": "stage-starfusion",
+      "executable": "app-eggd_starfusion/1.0.0"
+    },
+    {
+      "id": "stage-fusioninspector_scientists",
+      "executable": "app-eggd_fusioninspector/1.0.0"
+    },
+    {
+      "id": "stage-fusioninspector_rnaopa",
+      "executable": "app-eggd_fusioninspector/1.0.0"
+    },
+    {
+      "id": "stage-fusioninspector_testdir_cosmic",
+      "executable": "app-eggd_fusioninspector/1.0.0"
+    },
+    {
+      "id": "stage-rnaseqc",
+      "executable": "app-eggd_RNASeQC/1.1.1"
+    },
+    {
+      "id": "stage-picard",
+      "executable": "app-eggd_picard_QC/1.1.0"
+    },
+    {
+      "id": "stage-fastqc",
+      "executable": "app-eggd_fastqc/1.2.0"
+    }
+  ]
+}
