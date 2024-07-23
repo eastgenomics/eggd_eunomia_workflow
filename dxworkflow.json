@@ -12,7 +12,7 @@
       "input": {
         "junction": {
           "$dnanexus_link": {
-            "stage": "stage-GpGJ38040f983Xg492Q7Q9zz",
+            "stage": "stage-staraligner",
             "outputField": "chimeric_junctions"
           }
         },
@@ -20,6 +20,12 @@
           "$dnanexus_link": {
             "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
             "id": "file-GGygFkQ4Y6Yjp0jpBjgV9VZx"
+          }
+        },
+        "genome_lib": {
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-GJfX12j41p4GY5K3PY65VFjj"
           }
         }
       }
@@ -33,6 +39,18 @@
             "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
             "id": "file-GGzFp2Q43Gg5Y56p8yfGjPYb"
           }
+        },
+        "genome_lib": {
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-GJfX12j41p4GY5K3PY65VFjj"
+          }
+        },
+        "sr_predictions": {
+          "$dnanexus_link": {
+            "stage": "stage-starfusion",
+            "outputField": "starfusion_predictions"
+          }
         }
       }
     },
@@ -44,6 +62,18 @@
           "$dnanexus_link": {
             "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
             "id": "file-GGzFp2Q43Gg5Y56p8yfGjPYb"
+          }
+        },
+        "genome_lib": {
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-GJfX12j41p4GY5K3PY65VFjj"
+          }
+        },
+        "sr_predictions": {
+          "$dnanexus_link": {
+            "stage": "stage-starfusion",
+            "outputField": "starfusion_predictions"
           }
         }
       }
@@ -57,6 +87,18 @@
             "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
             "id": "file-GGzFp2Q43Gg5Y56p8yfGjPYb"
           }
+        },
+        "genome_lib": {
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-GJfX12j41p4GY5K3PY65VFjj"
+          }
+        },
+        "sr_predictions": {
+          "$dnanexus_link": {
+            "stage": "stage-starfusion",
+            "outputField": "starfusion_predictions"
+          }
         }
       }
     },
@@ -69,12 +111,41 @@
             "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
             "id": "file-Gp2YvGj43p6bP660QjZ6zV60"
           }
+        },
+        "CTAT_bundle": {
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-GJfX12j41p4GY5K3PY65VFjj"
+          }
+        },
+        "bam": {
+          "$dnanexus_link": {
+            "stage": "stage-staraligner",
+            "outputField": "output_bam"
+          }
         }
       }
     },
     {
       "id": "stage-picard",
-      "executable": "app-eggd_picard_QC/1.1.0"
+      "executable": "app-eggd_picard_QC/1.1.0",
+      "input": {
+        "fasta_index": {
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-GJfX12j41p4GY5K3PY65VFjj"
+          }
+        },
+        "sorted_bam": {
+          "$dnanexus_link": {
+            "stage": "stage-staraligner",
+            "outputField": "output_bam"
+          }
+        },
+        "run_CollectMultipleMetrics": false,
+        "run_CollectHsMetrics": false,
+        "run_CollectRnaSeqMetrics": true
+      }
     },
     {
       "id": "stage-fastqc",
