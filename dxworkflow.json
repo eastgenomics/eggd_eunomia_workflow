@@ -51,7 +51,8 @@
             "stage": "stage-starfusion",
             "outputField": "starfusion_predictions"
           }
-        }
+        },
+        "include_trinity": true
       }
     },
     {
@@ -75,7 +76,8 @@
             "stage": "stage-starfusion",
             "outputField": "starfusion_predictions"
           }
-        }
+        },
+        "include_trinity": true
       }
     },
     {
@@ -99,7 +101,8 @@
             "stage": "stage-starfusion",
             "outputField": "starfusion_predictions"
           }
-        }
+        },
+        "include_trinity": true
       }
     },
     {
@@ -122,6 +125,12 @@
           "$dnanexus_link": {
             "stage": "stage-staraligner",
             "outputField": "output_bam"
+          }
+        },
+        "bed": {
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-Gp8Xxv842QQqKY9Z5938xQP0"
           }
         }
       }
