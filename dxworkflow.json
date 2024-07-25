@@ -4,7 +4,7 @@
   "stages": [
     {
       "id": "stage-staraligner",
-      "executable": "app-eggd_staraligner/1.0.1"
+      "executable": "app-GpQQgbQ41xK61Jxxj2z7vj0z"
     },
     {
       "id": "stage-starfusion",
@@ -31,7 +31,7 @@
       }
     },
     {
-      "id": "stage-fusioninspector_scientists",
+      "id": "stage-fusioninspector_scientist",
       "executable": "app-eggd_fusioninspector/1.0.0",
       "input": {
         "fi_docker": {
@@ -40,6 +40,14 @@
             "id": "file-GGzFp2Q43Gg5Y56p8yfGjPYb"
           }
         },
+        "known_fusions": [
+          {
+            "$dnanexus_link": {
+              "project": "project-GQv5vBj4JJKpv6kgp51VyY0b",
+              "id": "file-GpGY3X84JJKvJkQyZv42VxqK"
+            }
+          }
+        ],
         "genome_lib": {
           "$dnanexus_link": {
             "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
@@ -71,6 +79,14 @@
             "id": "file-GJfX12j41p4GY5K3PY65VFjj"
           }
         },
+        "known_fusions": [
+          {
+            "$dnanexus_link": {
+              "project": "project-GQv5vBj4JJKpv6kgp51VyY0b",
+              "id": "file-GpGQq8j4JJKgbjK5z5gGxx6K"
+            }
+          }
+        ],
         "sr_predictions": {
           "$dnanexus_link": {
             "stage": "stage-starfusion",
@@ -96,6 +112,14 @@
             "id": "file-GJfX12j41p4GY5K3PY65VFjj"
           }
         },
+        "known_fusions": [
+        {
+          "$dnanexus_link": {
+            "project": "project-GQv5vBj4JJKpv6kgp51VyY0b",
+            "id": "file-GpGVQZj4JJKy6vGyZz2GQ2p2"
+          }
+        }
+      ],
         "sr_predictions": {
           "$dnanexus_link": {
             "stage": "stage-starfusion",
@@ -154,6 +178,11 @@
         "run_CollectMultipleMetrics": false,
         "run_CollectHsMetrics": false,
         "run_CollectRnaSeqMetrics": true
+      },
+      "systemRequirements": {
+        "*": {
+          "instanceType": "mem1_ssd2_v2_x8"
+        }
       }
     },
     {
