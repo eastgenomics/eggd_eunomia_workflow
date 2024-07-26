@@ -4,7 +4,7 @@
   "stages": [
     {
       "id": "stage-staraligner",
-      "executable": "app-GpQQgbQ41xK61Jxxj2z7vj0z",
+      "executable": "app-eggd_staraligner/1.0.2",
       "folder": "eggd_staraligner_v1.0.2"
     },
     {
