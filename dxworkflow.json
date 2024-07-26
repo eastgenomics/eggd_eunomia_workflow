@@ -1,10 +1,10 @@
 {
-  "name": "pancan_workflow_v1.0.0",
-  "title": "pancan_workflow_v1.0.0",
+  "name": "eunomia_workflow_v1.0.0",
+  "title": "eunomia_workflow_v1.0.0",
   "stages": [
     {
       "id": "stage-staraligner",
-      "executable": "app-GpQQgbQ41xK61Jxxj2z7vj0z",
+      "executable": "app-eggd_staraligner/1.0.2",
       "folder": "eggd_staraligner_v1.0.2"
     },
     {
@@ -46,8 +46,8 @@
         "known_fusions": [
           {
             "$dnanexus_link": {
-              "project": "project-GQv5vBj4JJKpv6kgp51VyY0b",
-              "id": "file-GpGY3X84JJKvJkQyZv42VxqK"
+              "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+              "id": "file-GpQXz1j4JJKX9PPVpKpBzV7Q"
             }
           }
         ],
@@ -86,7 +86,7 @@
         "known_fusions": [
           {
             "$dnanexus_link": {
-              "project": "project-GQv5vBj4JJKpv6kgp51VyY0b",
+              "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
               "id": "file-GpGQq8j4JJKgbjK5z5gGxx6K"
             }
           }
@@ -120,7 +120,7 @@
         "known_fusions": [
         {
           "$dnanexus_link": {
-            "project": "project-GQv5vBj4JJKpv6kgp51VyY0b",
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
             "id": "file-GpGVQZj4JJKy6vGyZz2GQ2p2"
           }
         }
