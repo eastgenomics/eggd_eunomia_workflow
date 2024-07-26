@@ -1,4 +1,4 @@
-# eggd_pancan_workflow (DNAnexus Platform Workflow)
+# eggd_janus_workflow (DNAnexus Platform Workflow)
 
 DNAnexus workflow to support the Pan-Cancer service
 
