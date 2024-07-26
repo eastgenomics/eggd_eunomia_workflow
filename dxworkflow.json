@@ -1,6 +1,6 @@
 {
-  "name": "pancan_workflow_v1.0.0",
-  "title": "pancan_workflow_v1.0.0",
+  "name": "janus_workflow_v1.0.0",
+  "title": "janus_workflow_v1.0.0",
   "stages": [
     {
       "id": "stage-staraligner",
