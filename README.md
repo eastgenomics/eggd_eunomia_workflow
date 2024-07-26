@@ -2,8 +2,9 @@
 
 DNAnexus workflow to support the Pan-Cancer service
 
-(workflow schematic)
+![Image of workflow](images/pancan_workflow.drawio.png)
 
+---
 ## What version of apps are used in this workflow?
 
 |  App 	| Version  	|
