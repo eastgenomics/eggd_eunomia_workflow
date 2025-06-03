@@ -68,6 +68,19 @@
       "id": "stage-fastqc",
       "executable": "app-eggd_fastqc/1.2.0",
       "folder": "eggd_fastqc_v1.2.0"
+    },
+    {
+      "id": "stage-arriba",
+      "executable": "app-eggd_arriba/1.0.0",
+      "folder": "eggd_arriba_v1.0.0",
+      "input": {
+        "bam": {
+          "$dnanexus_link": {
+            "stage": "stage-staraligner",
+            "outputField": "output_bam"
+          }
+        }
+      }
     }
   ]
 }
