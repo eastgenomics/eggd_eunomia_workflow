@@ -1,6 +1,6 @@
 {
-  "name": "eunomia_workflow_v1.1.0",
-  "title": "eunomia_workflow_v1.1.0",
+  "name": "eunomia_workflow_v1.2.0",
+  "title": "eunomia_workflow_v1.2.0",
   "stages": [
     {
       "id": "stage-staraligner",
