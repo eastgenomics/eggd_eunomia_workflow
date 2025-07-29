@@ -71,13 +71,19 @@
     },
     {
       "id": "stage-arriba",
-      "executable": "app-eggd_arriba/1.0.0",
-      "folder": "eggd_arriba_v1.0.0",
+      "executable": "app-eggd_arriba/1.2.0",
+      "folder": "eggd_arriba_v1.2.0",
       "input": {
         "bam": {
           "$dnanexus_link": {
             "stage": "stage-staraligner",
             "outputField": "output_bam"
+          }
+        },
+        "index": {
+          "$dnanexus_link": {
+            "stage": "stage-staraligner",
+            "outputField": "output_bam_bai"
           }
         }
       }
