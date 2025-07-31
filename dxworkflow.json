@@ -1,16 +1,17 @@
 {
-  "name": "eunomia_workflow_v1.2.0",
-  "title": "eunomia_workflow_v1.2.0",
+  "name": "eunomia_workflow_v1.3.0",
+  "title": "eunomia_workflow_v1.3.0",
+  "summary": "Eunomia Workflow",
   "stages": [
     {
       "id": "stage-staraligner",
       "executable": "app-eggd_staraligner/1.0.2",
-      "folder": "eggd_staraligner_v1.0.2"
+      "folder": "/eggd_staraligner_v1.0.2"
     },
     {
       "id": "stage-starfusion",
       "executable": "app-eggd_starfusion/1.0.0",
-      "folder": "eggd_starfusion_v1.0.0",
+      "folder": "/eggd_starfusion_v1.0.0",
       "input": {
         "junction": {
           "$dnanexus_link": {
@@ -23,7 +24,7 @@
     {
       "id": "stage-fusioninspector",
       "executable": "app-eggd_fusioninspector/1.1.0",
-      "folder": "eggd_fusioninspector_v1.1.0",
+      "folder": "/eggd_fusioninspector_v1.1.0",
       "input": {
         "sr_predictions": {
           "$dnanexus_link": {
@@ -36,7 +37,7 @@
     {
       "id": "stage-rnaseqc",
       "executable": "app-eggd_RNASeQC/1.1.1",
-      "folder": "eggd_rnaseqc_v1.1.1",
+      "folder": "/eggd_rnaseqc_v1.1.1",
       "input": {
         "bam": {
           "$dnanexus_link": {
@@ -49,7 +50,7 @@
     {
       "id": "stage-picard",
       "executable": "app-eggd_picard_QC/1.1.0",
-      "folder": "eggd_picard_v1.1.0",
+      "folder": "/eggd_picard_v1.1.0",
       "input": {
         "sorted_bam": {
           "$dnanexus_link": {
@@ -67,17 +68,23 @@
     {
       "id": "stage-fastqc",
       "executable": "app-eggd_fastqc/1.2.0",
-      "folder": "eggd_fastqc_v1.2.0"
+      "folder": "/eggd_fastqc_v1.2.0"
     },
     {
       "id": "stage-arriba",
-      "executable": "app-eggd_arriba/1.0.0",
-      "folder": "eggd_arriba_v1.0.0",
+      "executable": "app-eggd_arriba/1.2.0",
+      "folder": "/eggd_arriba_v1.2.0",
       "input": {
         "bam": {
           "$dnanexus_link": {
             "stage": "stage-staraligner",
             "outputField": "output_bam"
+          }
+        },
+        "index": {
+          "$dnanexus_link": {
+            "stage": "stage-staraligner",
+            "outputField": "output_bam_bai"
           }
         }
       }
