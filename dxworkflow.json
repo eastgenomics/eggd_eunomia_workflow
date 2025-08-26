@@ -1,6 +1,6 @@
 {
-  "name": "eunomia_workflow_v1.3.0",
-  "title": "eunomia_workflow_v1.3.0",
+  "name": "eunomia_workflow_v1.4.0",
+  "title": "eunomia_workflow_v1.4.0",
   "summary": "Eunomia Workflow",
   "stages": [
     {
@@ -49,8 +49,8 @@
     },
     {
       "id": "stage-picard",
-      "executable": "app-eggd_picard_QC/1.1.0",
-      "folder": "/eggd_picard_v1.1.0",
+      "executable": "app-eggd_picard_QC/1.2.0",
+      "folder": "/eggd_picard_v1.2.0",
       "input": {
         "sorted_bam": {
           "$dnanexus_link": {
