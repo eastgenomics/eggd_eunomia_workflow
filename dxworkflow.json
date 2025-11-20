@@ -1,6 +1,6 @@
 {
-  "name": "eunomia_workflow_v1.4.0",
-  "title": "eunomia_workflow_v1.4.0",
+  "name": "eunomia_workflow_v1.4.1",
+  "title": "eunomia_workflow_v1.4.1",
   "summary": "Eunomia Workflow",
   "stages": [
     {
@@ -23,8 +23,8 @@
     },
     {
       "id": "stage-fusioninspector",
-      "executable": "app-eggd_fusioninspector/1.1.0",
-      "folder": "/eggd_fusioninspector_v1.1.0",
+      "executable": "app-eggd_fusioninspector/1.1.1",
+      "folder": "/eggd_fusioninspector_v1.1.1",
       "input": {
         "sr_predictions": {
           "$dnanexus_link": {
