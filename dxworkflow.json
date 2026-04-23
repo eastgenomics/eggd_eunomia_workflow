@@ -1,12 +1,12 @@
 {
-  "name": "eunomia_workflow_v1.4.1",
-  "title": "eunomia_workflow_v1.4.1",
+  "name": "eunomia_workflow_v1.4.2",
+  "title": "eunomia_workflow_v1.4.2",
   "summary": "Eunomia Workflow",
   "stages": [
     {
       "id": "stage-staraligner",
-      "executable": "app-eggd_staraligner/1.0.2",
-      "folder": "/eggd_staraligner_v1.0.2"
+      "executable": "app-eggd_staraligner/1.0.3",
+      "folder": "/eggd_staraligner_v1.0.3"
     },
     {
       "id": "stage-starfusion",
