@@ -1,6 +1,6 @@
 {
-  "name": "eunomia_workflow_v1.4.1",
-  "title": "eunomia_workflow_v1.4.1",
+  "name": "eunomia_workflow_v2.0.0",
+  "title": "eunomia_workflow_v2.0.0",
   "summary": "Eunomia Workflow",
   "stages": [
     {
@@ -17,19 +17,6 @@
           "$dnanexus_link": {
             "stage": "stage-staraligner",
             "outputField": "chimeric_junctions"
-          }
-        }
-      }
-    },
-    {
-      "id": "stage-fusioninspector",
-      "executable": "app-eggd_fusioninspector/1.1.1",
-      "folder": "/eggd_fusioninspector_v1.1.1",
-      "input": {
-        "sr_predictions": {
-          "$dnanexus_link": {
-            "stage": "stage-starfusion",
-            "outputField": "starfusion_predictions"
           }
         }
       }
