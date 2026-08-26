@@ -67,8 +67,8 @@
     },
     {
       "id": "stage-fastqc",
-      "executable": "app-eggd_fastqc/1.2.0",
-      "folder": "/eggd_fastqc_v1.2.0"
+      "executable": "app-eggd_fastqc/1.2.1",
+      "folder": "/eggd_fastqc_v1.2.1"
     },
     {
       "id": "stage-arriba",
